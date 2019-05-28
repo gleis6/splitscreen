@@ -4,7 +4,7 @@
   "description": "CSS library to create customizable and beautiful landing pages.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"No test specified\""
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,9 @@
   "homepage": "https://github.com/gleis6/splitscreen#readme",
   "dependencies": {
     "np": "^5.0.2"
-  }
+  },
+  "np": {
+		"yarn": false,
+		"contents": "dist"
+	}
 }
