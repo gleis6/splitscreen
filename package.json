@@ -1,6 +1,6 @@
 {
   "name": "splittscreen",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "CSS library to create customizable and beautiful landing pages.",
   "main": "index.js",
   "scripts": {
@@ -28,7 +28,7 @@
     "np": "^5.0.2"
   },
   "np": {
-		"yarn": false,
-		"contents": "dist"
-	}
+    "yarn": false,
+    "contents": "dist"
+  }
 }
