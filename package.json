@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/gleis6/splitscreen/issues"
   },
-  "homepage": "https://github.com/gleis6/splitscreen#readme"
+  "homepage": "https://github.com/gleis6/splitscreen#readme",
+  "dependencies": {
+    "np": "^5.0.2"
+  }
 }
