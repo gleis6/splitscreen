@@ -1,0 +1,7 @@
+/.env
+/.idea
+/vendor
+/Konzept
+
+gulpfile.js
+.DS_Store
