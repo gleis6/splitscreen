@@ -1,0 +1,27 @@
+{
+  "name": "splittscreen",
+  "version": "0.1.0",
+  "description": "CSS library to create customizable and beautiful landing pages.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gleis6/splitscreen.git"
+  },
+  "keywords": [
+    "splitscreen",
+    "css",
+    "library",
+    "landing",
+    "page",
+    "customizable"
+  ],
+  "author": "MaxiMilli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gleis6/splitscreen/issues"
+  },
+  "homepage": "https://github.com/gleis6/splitscreen#readme"
+}
