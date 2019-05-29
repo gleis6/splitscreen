@@ -1,0 +1,107 @@
+/*  SCHRIFTEN  */
+
+@import url("https://use.typekit.net/erk5ock.css");
+$daktiv-title-font: "aktiv-grotesk", sans-serif;
+$daktiv-title-weight: 800;
+$daktiv-title-style: normal;
+$daktiv-subtitle-font: "aktiv-grotesk", sans-serif;
+$daktiv-subtitle-weight: 700;
+$daktiv-subtitle-style: normal;
+$daktiv-text-font: "roboto", sans-serif;
+$daktiv-text-weight: 400;
+$daktiv-text-style: normal;
+
+
+/*   VARIABLEN  */
+$border-width: 26px;
+
+/*  MIXINS   */
+
+@mixin phone-down {
+    @media (max-width: 700px) { @content; }
+}
+@mixin tablet-down {
+    @media (max-width: 1200px) { @content; }
+}
+
+body{
+    line-height: 1.4;
+}
+
+
+/*  HIDING for responsiveness  */
+.mobile-only {
+    display: none;
+
+    @include phone-down {
+        display: block;
+    }
+}
+
+.tablet-only {
+    display: none;
+
+    @include tablet-down {
+        display: block;
+    }
+
+    @include phone-down {
+        display: none;
+    }
+}
+
+.desktop-only {
+    display: block;
+
+    @include tablet-down {
+        display: none;
+    }
+}
+
+.desktop-down {
+    display: block;
+}
+
+.tablet-down {
+    display: none;
+
+    @include tablet-down {
+        display: block;
+    }
+}
+
+.mobile-down {
+    display: none;
+
+    @include phone-down {
+        display: block;
+    }
+}
+
+.mobile-down-flex {
+    display: none;
+
+    @include phone-down {
+        display: flex;
+    }
+}
+
+.desktop-up {
+    display: inherit;
+
+    @include tablet-down {
+        display: none;
+    }
+}
+
+.tablet-up {
+    display: block;
+
+    @include phone-down {
+        display: none;
+    }
+}
+
+.mobile-up {
+    display: block;
+}

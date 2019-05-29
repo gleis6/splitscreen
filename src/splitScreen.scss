@@ -1,0 +1,606 @@
+
+
+.splitScreen__container {
+  display: block;
+  padding: 0px;
+  margin: 0px;
+  overflow-y: none;
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-column-span: 3;
+  grid-column-end: 4;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+  -ms-grid-row-span: 4;
+  grid-row-end: 5;
+  width: 100%;
+  
+  @include tablet-down {
+    padding-top: 150px;
+    -ms-grid-row: 4;
+    grid-row-start: 4;
+    -ms-grid-row-span: 1;
+  }
+
+  @include phone-down {
+    padding-top: 100px;
+    -ms-grid-row: 4;
+    grid-row-start: 4;
+    -ms-grid-row-span: 1;
+  }
+}
+
+.splitScreen__container--border {
+  margin: $border-width;
+  width: calc(100% - #{$border-width} - #{$border-width});
+  height: calc(100% - #{$border-width} - #{$border-width});
+  margin-top: $border-width;
+  margin-left: $border-width;
+}
+
+.splitScreen__section {
+  width: 100%;
+  max-width: 1900px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+
+  @include tablet-down {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  &.splitScreen__section--switch {
+    flex-direction: row;
+  }
+
+  &.splitScreen__section--mobileswitch {
+    @include tablet-down {
+      flex-direction: row;
+    }
+  }
+    
+
+}
+
+.splitScreen__section--border {
+  height: 100%;
+  
+  &.no-border {
+    height:auto;
+  }
+}
+
+.splitScreen__section--switch {
+flex-direction: row-reverse;
+}
+
+.splitScreen__bg--dark {
+  background-color: #212322;
+}
+
+.splitScreen__bg--light {
+  background-color: #d8d8d8;
+
+  @include phone-down {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.splitScreen__bg--medium {
+  background-color: #b9b9b9;
+}
+
+.splitScreen__bg--dark {
+  background-color: #979797;
+}
+
+.splitScreen__whole {
+  width: 100%;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.splitScreen__part {
+width: 50%;
+min-height: 100%;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+}
+
+.splitScreen__floatBottom {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+
+  @include tablet-down {   
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+
+  @include phone-down {
+    
+  }
+}
+
+.splitScreen__floatCenter {
+-ms-flex-wrap: wrap;
+flex-wrap: wrap;
+-ms-flex-line-pack: center;
+align-content: center;
+-webkit-box-align: center;
+-ms-flex-align: center;
+align-items: center;
+}
+
+.splitScreen__part--bgimage {
+background-attachment: fixed;
+background-position: 0 center;
+background-size: 50%;
+background-attachment: fixed;
+}
+
+.splitScreen__part--bgimagefix {
+background-position: center;
+background-size: cover;
+}
+
+.splitScreen__part--minheight {
+  min-height: 60vh;
+}
+
+.splitScreen__content {
+  padding: 1rem;
+  width: 100%;
+
+  @include tablet-down {
+    padding: 0.5rem;
+    width: 100%;
+  }
+
+  @include phone-down {
+    width: 95%;
+  }
+
+  h2 {
+    font-family: $daktiv-title-font;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: $daktiv-title-weight;
+    color: #000000;
+    padding-top: 5vh;
+    margin-bottom: -0.3vh;
+
+    @include tablet-down {
+      
+      font-size: 2rem;
+    }
+  
+    @include phone-down {
+      font-size: 1.3rem;
+      line-height: 1.2;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  h3 {
+    font-family: $daktiv-title-font;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: $daktiv-title-weight;
+    color: #000000;
+    margin-bottom: 10px;
+
+    @include tablet-down {
+      
+      font-size: 1.4rem;
+    }
+  
+    @include phone-down {
+      font-size: 1rem;
+      line-height: 1.2;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  p {
+    font-family: open-sans, sans-serif;
+    font-size: 1rem;
+    color: #000000;
+
+    @include tablet-down {
+    
+    }
+  
+    @include phone-down {
+      
+    }
+  }
+
+  &.splitScreen__content--meta {
+    font-family: $daktiv-text-font;
+    font-weight: $daktiv-text-weight;
+    font-size: 0.8 rem;
+    color: gray;
+  }
+
+  .splitScreen__content--formatText {
+    background-color: #ffffff;
+    padding: 5px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+    font-family: $daktiv-title-font;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: $daktiv-title-weight;
+    color: #000000;
+    position: absolute;
+    bottom: 0;
+    z-index: 6;
+    width: 40%;
+    max-width: 850px;
+
+  }
+}
+
+
+
+
+
+.splitScreen__content--fixed {
+position: absolute;
+
+}
+
+.splitScreen__content--textRight {
+text-align: right;
+}
+
+.splitScreen__content--spaceLeft {
+padding-left: 5vw;
+}
+
+.splitScreen__scrollContent {
+width: 100%;
+height: 100%;
+overflow-y: scroll;
+}
+
+.splitScreen__scrollContent--flex {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  
+  @include tablet-down {
+    overflow: hidden;
+    height: auto;
+  }
+
+  &.splitScreen__scrollContent--border {
+    height: 100%;
+  }
+}
+
+.splitScreen__scrollContent--element {
+  width: 100%;
+  height: 40vh;
+  background-color: #5d5d5d;
+  border: 2px #ffffff solid;
+  box-sizing: border-box;
+}
+
+.splitScreen__scrollContent--halfelement {
+  width: 50%;
+  padding-top: 50%;
+  height: 0%;
+  background-color: #5d5d5d;
+  border: 2px #ffffff solid;
+  box-sizing: border-box;
+  position: relative;
+
+  @include phone-down {
+    width: 100%;
+    padding-top: 80%;
+  }
+
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    overflow: hidden;
+  }
+
+  .title {
+    padding: 5px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-family: $daktiv-title-font;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: $daktiv-title-weight;
+    color: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 6;
+  }
+}
+
+.splitScreen__galery {
+  width: 100vw;
+  height: 50vh;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.splitScreen__galery--image {
+height: 45vh;
+margin: 2.5vh;
+}
+
+.splitScreen__title {
+  font-family: $daktiv-title-font;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: $daktiv-title-weight;
+  color: #ffffff;
+
+  .base-back {
+    font-weight: 400;
+  }
+
+  @include tablet-down {
+    font-size: 3rem;
+  }
+
+  @include phone-down {
+    font-size: 1.3rem;
+    padding-top: 0.5rem;
+  }
+}
+
+.splitScreen__title--black {
+color: #000000;
+}
+
+.splitScreen__title--left {
+text-align: left;
+}
+
+.splitScreen__title--right {
+text-align: right;
+}
+
+.splitScreen__testimonial {
+font-family: $daktiv-title-font;
+margin: 0 auto;
+width: 45vw;
+display: flex;
+flex-direction: column;
+text-align: center;
+padding: 5vh;
+margin-bottom: 8vh;
+}
+
+.splitScreen__testimonial--work {
+text-transform: uppercase;
+font-size: 1rem;
+font-weight: 400;
+}
+
+.splitScreen__testimonial--name {
+text-transform: uppercase;
+font-size: 3rem;
+font-weight: 900;
+}
+
+.splitScreen__testimonial--zitat {
+font-family: open-sans, sans-serif;
+font-size: 1rem;
+font-style: italic;
+}
+
+.splitScreen__label {
+font-family: brandon-grotesque, sans-serif;
+text-transform: uppercase;
+font-size: 3rem;
+font-weight: 900;
+color: #000000;
+background-color: #ffffff;
+padding:0;
+}
+
+.splitScreen__sublabel {
+font-family: brandon-grotesque, sans-serif;
+text-transform: uppercase;
+font-size: 1.5rem;
+font-weight: 900;
+color: #000000;
+background-color: #ffffff;
+padding:0;
+}
+
+.splitScreen__ruler {
+width: 100%;
+height: 15vh;
+}
+
+.ss-embed-iframe {
+  height: 90vh; 
+  width: 90vw;
+  margin: 0 auto;
+  border: none;
+  z-index: 5;
+
+  @include phone-down {
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  &.embed {
+    background-color: white;
+  }
+}
+
+.ss-quarter-image {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+  position: relative;
+
+  a {
+    width: 25%;
+    height: 300px;
+    padding: 2vw;
+    
+    @include tablet-down {
+      width: 45%;
+    }
+
+    @include phone-down {
+      width: 90%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.ss-longtext {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.ss-spacer {
+  width: 100%;
+  height: 27px;
+}
+
+.ss-fixed {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  width: 95%;
+}
+
+.ss-relative {
+  position: relative;
+}
+
+.ss-statement {
+  font-family: $daktiv-text-font;
+  font-weight: $daktiv-text-weight;
+  color: #5d5d5d;
+  margin-top: 3rem;
+  width: 90%;
+}
+
+/*
+*    MOBILE
+*
+*/
+
+@media (max-width: 1000px) { 
+
+.splitScreen__whole {
+  width: 100vw;
+  min-height: 40vh;
+  @include phone-down {
+    min-height: auto;
+  }
+}
+
+.splitScreen__part {
+width: 100vw; 
+min-height: 20vh;
+}
+
+.splitScreen__part--half {
+min-height: 50vh;
+}
+
+
+.splitScreen__scrollContent--element {
+height: 60vh;
+}
+
+.splitScreen__testimonial {
+font-family: brandon-grotesque, sans-serif;
+margin: 0 auto;
+width: 75vw;
+display: flex;
+flex-direction: column;
+text-align: center;
+}
+
+.splitScreen__testimonial--work {
+text-transform: uppercase;
+font-size: 5rem;
+font-weight: 400;
+}
+
+.splitScreen__testimonial--name {
+text-transform: uppercase;
+font-size: 10rem;
+font-weight: 900;
+}
+
+.splitScreen__testimonial--zitat {
+font-family: open-sans, sans-serif;
+font-size: 5rem;
+}
+
+.splitScreen__label {
+font-size: 6rem;
+font-weight: 900;
+color: #000000;
+background-color: #ffffff;
+padding:0;
+}
+
+.splitScreen__sublabel {
+font-family: brandon-grotesque, sans-serif;
+text-transform: uppercase;
+font-size: 3.5rem;
+font-weight: 900;
+color: #000000;
+background-color: #ffffff;
+padding:0;
+}
+}
